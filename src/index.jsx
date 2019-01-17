@@ -1,3 +1,9 @@
+/**
+ * Main entry point
+ *
+ * Copyright 2019, Terry Chen
+ */
+
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 

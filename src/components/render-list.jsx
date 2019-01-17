@@ -1,5 +1,7 @@
 /**
  * Render a list of objects as a vertical definition-list like format
+ *
+ * Copyright 2019, Terry Chen
  */
 
 import React, { Component } from 'react';

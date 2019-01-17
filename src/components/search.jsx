@@ -1,5 +1,7 @@
 /**
  * Search bar component
+ *
+ * Copyright 2019, Terry Chen
  */
 
 import React, { Component } from 'react';
