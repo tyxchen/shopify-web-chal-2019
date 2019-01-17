@@ -1,0 +1,165 @@
+:root {
+    --primary-color: #222;
+    --secondary-color: #aaa;
+    --accent-color: #23995c;
+}
+
+html,body {
+    font: 1em/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: var(--primary-color);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: var(--accent-color);
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+header {
+    height: 200px;
+    background-image: linear-gradient(110deg, #1d5696, #22985c);
+}
+
+header h1 {
+    line-height: 200px;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.Section {
+    margin: 1rem auto;
+    padding: 0 2rem;
+    max-width: 960px;
+}
+
+.Search {
+    position: relative;
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.Search__input {
+    width: calc(100% - 60px);
+    height: 50px;
+    box-sizing: border-box;
+    line-height: 36px;
+    padding: 0 .5em;
+    border: 1px solid var(--secondary-color);
+    border-radius: 3px;
+}
+
+.Search__input:hover {
+    border-color: var(--primary-color);
+}
+
+.Search__input:focus {
+    border-color: var(--accent-color);
+}
+
+.Search__submit {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    line-height: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 3px;
+    margin-left: auto;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.Search__submit:hover,
+.Search__submit:focus {
+    opacity: .8;
+}
+
+/* hack to scale and flip icon according to spec */
+.Search__submit svg {
+    transform: scale(-1.8, 1.8) translateY(1px);
+}
+
+.Search__submit svg path {
+    fill: white;
+}
+
+.Search__clear {
+    position: absolute;
+    top: 0;
+    right: 60px;
+    height: 50px;
+    font-size: 1.5em;
+    background-color: transparent;
+    padding: 0 .5rem 3px;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+.Search__clear:hover,
+.Search__clear:focus {
+    opacity: .8;
+}
+
+.Message {
+    text-align: center;
+}
+
+.Message:empty {
+    display: none;
+}
+
+.ListItem {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.ListItem__favourite {
+    margin-right: 10px;
+}
+
+.ListItem__favourite svg path {
+    fill: var(--secondary-color);
+}
+
+.ListItem__favourite--favourited svg path {
+    fill: var(--accent-color);
+}
+
+.ListItem__title {
+    flex: 1;
+    font-size: 1.2em;
+    margin-top: -2px;
+    margin-right: 10px;
+}
+
+.ListItem__description {
+    flex: 2;
+}
+
+.ListItem__description > :first-child {
+    margin-top: 0;
+}
+
+.Favourites {
+    flex: 1;
+    background-color: #f7fefa;
+    padding-top: 0.1rem;
+    padding-bottom: 1rem;
+}
