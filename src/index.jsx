@@ -102,19 +102,19 @@ class App extends Component {
                     <Search query={this.state.searchQuery} onSearchUpdate={this.onSearchUpdate} />
                 </div>
             </section>
-            <p className="Section Message">{this.state.results.length == 0 ?
+            <p className="Section Message" aria-live="assertive">{this.state.results.length == 0 ?
                 Consts.STRINGS.NO_RESULTS_FOUND :
                 (typeof this.state.results[0] == "string" ?
                     this.state.results[0] :
                     "")
             }</p>
             <section className="Results">
-                <div className="Section">
+                <div className="Section" aria-live="assertive" aria-atomic="false">
                     {this.state.results.length > 0 && typeof this.state.results[0] != "string" && <RenderList things={this.state.results} onFavourite={this.onFavourite} className="Results__list" />}
                 </div>
             </section>
             <section className="Favourites">
-                <div className="Section">
+                <div className="Section" aria-live="assertive" aria-atomic="true">
                     <h1>Favourites</h1>
                     {this.state.favourites.length == 0 ?
                         <p className="Message">{Consts.STRINGS.NO_FAVOURITES}</p> :

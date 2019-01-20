@@ -40,8 +40,8 @@ export default class RenderList extends Component {
         return (<div className={this.props.className}>
             {this.props.things.map(thing => (<div className="ListItem" key={thing.title}>
             <div className={renderClassName(thing.favourite)}>
-                <a onClick={this.favourite.bind(this, thing)} href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <a onClick={this.favourite.bind(this, thing)} href="#" aria-label={thing.favourite ? `Unfavourite item ${thing.title}` : `Favourite item ${thing.title}`}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                 </a>
             </div>
             <div className="ListItem__title">{thing.title}</div>
